@@ -1,0 +1,20 @@
+:root {
+  --color-background: white;
+  --color-text: black
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: black;
+    --color-text: white
+  }
+} */
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 1s;
+  line-height: 1.6;
+}

@@ -9,7 +9,8 @@ var isClose = false
 var socket;
 onMounted(() => {
   chatScrollBot()
-  socket = new WebSocket('wss://socketsbay.com/wss/v2/1/demo/')
+  socket = new WebSocket('ws://127.0.0.1:8080')
+  // socket = new WebSocket('wss://socketsbay.com/wss/v2/1/demo/')
   console.log('Mounted')
   socket.onopen = () => {
     console.log("opened")
@@ -78,7 +79,6 @@ function sendMessage() {
 .chat-container {
   max-width: 70vw;
   min-height: 100vh;
-  max-height: 70vh;
   margin: auto;
   border: solid;
   border-radius: 2rem;
@@ -119,6 +119,15 @@ function sendMessage() {
     border-radius: 1rem;
     padding: 0.5vh;
     margin-right: 1rem;
+  }
+  .chat-container {
+    margin-top: 10vh !important;
+    max-width: 70vw;
+    min-height: 70vh;
+    max-height: 70vh;
+    margin: auto auto;
+    border: solid;
+    border-radius: 2rem;
   }
 }
 </style>

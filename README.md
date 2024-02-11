@@ -8,22 +8,34 @@ Current Features:
 4. Connect to socket using URL with ws prefix for http and wss prefix for http with tls
 5. Supports both sending and receiving of messages through the socket
 
-## Project Setup
+### Run and Test Application
 
-```sh
+Install docker https://docs.docker.com/get-docker/<br>
+(tested on Docker Desktop 4.27.2 (137060))
+
+Execute the following in `view-meet-frontend/`
+```docker
+docker build -t view-meet-frontend .
+```
+
+```docker
+docker run --name view-meet-frontend-container --rm -p 127.0.0.1:3000:3000 view-meet-frontend
+```
+
+Open multiple 127.0.0.1:3000 in different windows or in private or incognito mode and chat away 
+
+### Development Setup
+
+```shell
 npm install
 ```
 
-Visit any website that lets you test web sockets and replace the url in the code with the socket url.
-
-### Compile and Hot-Reload for Development
-
-```sh
+```shell
 npm run dev
 ```
 
-### Compile and Minify for Production
+Visit any website that lets you test web sockets and replace the url in the code with the socket url<br>
+**OR**<br>
+Download and run view-meet-backend
 
-```sh
-npm run build
-```
+Happy chatting away!
